@@ -2,6 +2,9 @@ package the13things;
 
 public class The13 {
 	
+	
+	
+	
 	//print all the integers from 1 to 255
 	public static void printIntegers() {
 		for(long i = 1 ; i <= 255 ; i++) {
@@ -21,7 +24,7 @@ public class The13 {
 	
 	
 	//find max assuming ints will be positive
-	public static void max(int[] arry) {    
+	public static void findMax(int[] arry) {    
 		int temp = 0;
 			for(int i : arry) {
 				if(i > temp) {
@@ -44,6 +47,13 @@ public class The13 {
 		return array;
 	}
 	
+	public static void odd() {
+		int[] odd = oddArray();
+		for(int i : odd) {
+			System.out.print(i + ", ");
+		}
+	}
+	
 	
 	public static void countPrintGreater(int y , int[] arry) {
 		int count = 0;
@@ -56,7 +66,48 @@ public class The13 {
 		System.out.println("Their are " + count + " numbers greater than " + y);
 	}
 	
+	//for sorting
+	public static int[] sort(int[] array) {
+		int temp;
+		for(int i = 1 ; i < array.length; i++) {
+			for(int j = i ; j < array.length ; j++) {
+				if(array[i-1] >  array[j]) {
+				temp = array[i-1] ;
+				array[i-1] = array[j];
+				array[j] = temp;
+				}
+			
+			}
+		
+		}
+		return array;
+	}
 	
+	public static int min(int[] array) {
+		int[] sorted = sort(array);
+		return sorted[0];		
+	}
+	
+	public static int max(int[] array) {
+		int[] sorted = sort(array);
+		return sorted[sorted.length - 1];		
+	}
+	
+	public static int average(int[] array) {
+		int avg = 0;
+		for(int num : array) {
+			avg += num;
+		}
+		avg = avg/array.length;
+		return avg;
+	}
+	
+	public static void minMaxAverage(int[] array) {
+		System.out.println("the min is " + min(array));
+		System.out.println("the max is " + max(array));
+		System.out.println("the average is " + average(array));
+		
+	}
 	
 	
 

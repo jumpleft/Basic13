@@ -8,16 +8,12 @@ public class MainPlaceToTest {
 	public static void main(String[] args) {
 		
 		
-		//The13.printIntegers();
-		//The13.printSumIntegers();
-		//The13.max(testOne);
-		int[] odd = The13.oddArray();
-			for(int i : odd) {
-				System.out.print(i + ", ");
-			}
-				
-		
-		//The13.countPrintGreater(6, testOne);
+		The13.printIntegers();
+		The13.printSumIntegers();
+		The13.findMax(testOne);
+		The13.odd();		
+		The13.countPrintGreater(6, testOne);
+		The13.minMaxAverage(testOne);
 		
 		
 	} 
